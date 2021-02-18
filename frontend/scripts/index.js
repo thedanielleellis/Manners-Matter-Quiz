@@ -4,13 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchUsers()
 })
 
-const BASE_URL = "http://localhost:3000/"
+const BASE_URL = "http://127.0.0.1:3000"
 const playButton = document.getElementById('play-btn')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
-let shuffledQuestions, currentQuestionIndex
 let currentUserID = undefined
 let questionsList = []
 let answersList = []
@@ -124,7 +123,6 @@ function startGame() {
   header.classList.add('hide')
   playButton.classList.add('hide')
   questionsAnswers(questionsList, answersList)
-  shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   questionContainerElement.classList.remove('hide')
   setNextQuestion()
@@ -167,10 +165,9 @@ function selectAnswer(e) {
   if (questionsList.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
   } else {
-
     user = {
       id: currentUserID,
-      username: hudUser.innerText,
+      username: hudUser.innerText
     }
     fetch(`${BASE_URL}/users/${currentUserID}`, {
       method: 'PATCH',
@@ -182,30 +179,30 @@ function selectAnswer(e) {
     })
     playButton.innerText = 'Restart'
     playButton.classList.remove('hide')
-    }
+  }
 }
 
-  function setStatusClass(element, correct) {
-    clearStatusClass(element)
-    if (correct) {
-      element.classList.add('correct')
-    } else {
-      element.classList.add('wrong')
-    }
+function setStatusClass(element, correct) {
+  clearStatusClass(element)
+  if (correct) {
+    element.classList.add('correct')
+  } else {
+    element.classList.add('wrong')
   }
+}
 
-  function clearStatusClass(element) {
-    element.classList.remove('correct')
-    element.classList.remove('wrong')
-  }
+function clearStatusClass(element) {
+  element.classList.remove('correct')
+  element.classList.remove('wrong')
+}
 
 
-  //Collect all questions & Answers in an Array
-  function questionsAnswers(questionsList, answersList) {
+//Collect all questions & Answers in an Array
+function questionsAnswers(questionsList, answersList) {
 
-    questionsList[0]["answers"] = answersList.slice(0, 4)
-    questionsList[1]["answers"] = answersList.slice(4, 8)
-    questionsList[2]["answers"] = answersList.slice(8, 12)
-    questionsList[3]["answers"] = answersList.slice(12, 16)
-    questionsList[4]["answers"] = answersList.slice(16, 20)
-  }
+  questionsList[0]["answers"] = answersList.slice(0, 4)
+  questionsList[1]["answers"] = answersList.slice(4, 8)
+  questionsList[2]["answers"] = answersList.slice(8, 12)
+  questionsList[3]["answers"] = answersList.slice(12, 16)
+  questionsList[4]["answers"] = answersList.slice(16, 20)
+}
