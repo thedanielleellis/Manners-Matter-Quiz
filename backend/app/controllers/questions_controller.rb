@@ -5,7 +5,7 @@ class QuestionsController < ApplicationController
   def index
     @questions = Question.all
 
-    render json: @questions
+    render json: Question.all, include: [answers: {only: [:content]}], except: [:created_at, :updated_at]
   end
 
   # GET /questions/1
