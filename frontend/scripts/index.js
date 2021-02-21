@@ -44,7 +44,7 @@ function fetchQuestions() {
 }
 fetchQuestions()
 
-function fetchAnswers() {
+ function fetchAnswers() {
   fetch(`${BASE_URL}/answers`)
     .then(res => res.json())
     .then(answers => {
@@ -55,7 +55,7 @@ function fetchAnswers() {
     })
 
 }
-fetchAnswers()
+fetchAnswers() 
 
 //*******create - create a new user*********
 // create a form and stop the default submit behavior with event listener
