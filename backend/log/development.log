@@ -2976,3 +2976,1264 @@ Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.9ms | Allocations: 186
 Completed 200 OK in 130ms (Views: 113.5ms | ActiveRecord: 6.5ms | Allocations: 13429)
 
 
+Started GET "/users" for 127.0.0.1 at 2021-02-19 23:07:31 -0600
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/questions" for 127.0.0.1 at 2021-02-19 23:07:31 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 2.6ms | Allocations: 5927)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.64ms)
+Completed 200 OK in 124ms (Views: 118.4ms | ActiveRecord: 1.3ms | Allocations: 9820)
+
+
+  
+SyntaxError (/Users/danielleellis/js-project/backend/app/serializers/question_serializer.rb:6: syntax error, unexpected end-of-input, expecting end):
+  
+app/serializers/question_serializer.rb:6: syntax error, unexpected end-of-input, expecting end
+app/serializers/question_serializer.rb:6: syntax error, unexpected end-of-input, expecting end
+app/controllers/questions_controller.rb:8:in `index'
+Started GET "/" for ::1 at 2021-02-19 23:08:02 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/danielleellis/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/danielleellis/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 22.6ms | Allocations: 316)
+Completed 200 OK in 39ms (Views: 32.2ms | ActiveRecord: 0.0ms | Allocations: 1594)
+
+
+Started GET "/users" for ::1 at 2021-02-19 23:08:07 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 3.2ms | Allocations: 966)
+
+
+Started GET "/questions" for ::1 at 2021-02-19 23:08:12 -0600
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms | Allocations: 1141)
+
+
+  
+SyntaxError (/Users/danielleellis/js-project/backend/app/serializers/question_serializer.rb:6: syntax error, unexpected end-of-input, expecting end):
+  
+app/serializers/question_serializer.rb:6: syntax error, unexpected end-of-input, expecting end
+app/serializers/question_serializer.rb:6: syntax error, unexpected end-of-input, expecting end
+app/controllers/questions_controller.rb:8:in `index'
+Started GET "/answers" for ::1 at 2021-02-19 23:08:21 -0600
+Processing by AnswersController#index as HTML
+  [1m[36mAnswer Load (0.8ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  ↳ app/controllers/answers_controller.rb:8:in `index'
+No serializer found for resource: #<Answer id: 1, text: "As soon as you are seated", correct: false, question_id: 1, created_at: "2021-02-17 22:29:50", updated_at: "2021-02-17 22:29:50">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Answer::ActiveRecord_Relation (5.02ms)
+Completed 200 OK in 39ms (Views: 27.8ms | ActiveRecord: 1.8ms | Allocations: 9083)
+
+
+Started GET "/quizzes" for ::1 at 2021-02-19 23:08:35 -0600
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (0.9ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.9ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 2.0ms | Allocations: 5180)
+
+
+  
+SyntaxError (/Users/danielleellis/js-project/backend/app/serializers/question_serializer.rb:6: syntax error, unexpected end-of-input, expecting end):
+  
+app/serializers/question_serializer.rb:6: syntax error, unexpected end-of-input, expecting end
+app/serializers/question_serializer.rb:6: syntax error, unexpected end-of-input, expecting end
+app/serializers/quiz_serializer.rb:4:in `block in <class:QuizSerializer>'
+app/controllers/quizzes_controller.rb:8:in `index'
+Started GET "/questions" for ::1 at 2021-02-19 23:10:04 -0600
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms | Allocations: 2594)
+
+
+  
+SyntaxError (/Users/danielleellis/js-project/backend/app/serializers/question_serializer.rb:6: syntax error, unexpected end-of-input, expecting end):
+  
+app/serializers/question_serializer.rb:6: syntax error, unexpected end-of-input, expecting end
+app/serializers/question_serializer.rb:6: syntax error, unexpected end-of-input, expecting end
+app/controllers/questions_controller.rb:8:in `index'
+Started GET "/questions" for ::1 at 2021-02-19 23:11:10 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.8ms | Allocations: 5537)
+
+
+  
+SyntaxError (/Users/danielleellis/js-project/backend/app/serializers/question_serializer.rb:6: syntax error, unexpected end-of-input, expecting end):
+  
+app/serializers/question_serializer.rb:6: syntax error, unexpected end-of-input, expecting end
+app/serializers/question_serializer.rb:6: syntax error, unexpected end-of-input, expecting end
+app/controllers/questions_controller.rb:8:in `index'
+Started GET "/questions" for ::1 at 2021-02-19 23:11:30 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.69ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 2.1ms | Allocations: 7649)
+
+
+  
+NameError (uninitialized constant QuestionSerializer::AnswerSerializer
+Did you mean?  AnswersController):
+  
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/questions_controller.rb:8:in `index'
+Started GET "/questions" for ::1 at 2021-02-19 23:13:41 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (25.15ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 2.0ms | Allocations: 7858)
+
+
+  
+NoMethodError (undefined method `answers' for #<QuestionSerializer:0x00007fe06ed780b0>):
+  
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/questions_controller.rb:8:in `index'
+Started GET "/questions" for ::1 at 2021-02-19 23:16:15 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (1.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (53.75ms)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 5.5ms | Allocations: 21032)
+
+
+  
+NoMethodError (undefined method `answers' for #<QuestionSerializer:0x00007fe072beade8>):
+  
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/questions_controller.rb:8:in `index'
+Started GET "/questions" for 127.0.0.1 at 2021-02-19 23:19:57 -0600
+Started GET "/users" for 127.0.0.1 at 2021-02-19 23:19:57 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (1.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+Processing by UsersController#index as */*
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.11ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 2.6ms | Allocations: 8469)
+
+
+  
+NoMethodError (undefined method `answers' for #<QuestionSerializer:0x00007fe072ea0650>):
+  
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/questions_controller.rb:8:in `index'
+Completed 200 OK in 32ms (Views: 27.9ms | ActiveRecord: 1.0ms | Allocations: 6787)
+
+
+Started GET "/questions" for ::1 at 2021-02-19 23:38:30 -0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.82ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 1.1ms | Allocations: 1978)
+
+
+  
+NoMethodError (undefined method `answers' for #<QuestionSerializer:0x00007fe072d1a8a8>):
+  
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/questions_controller.rb:8:in `index'
+Started GET "/questions" for ::1 at 2021-02-19 23:48:17 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.9ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.8ms | Allocations: 6510)
+
+
+  
+NoMethodError (undefined method `answers' for #<QuestionSerializer:0x00007fe0710c8060>):
+  
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/questions_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2021-02-19 23:48:22 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.6ms | Allocations: 1257)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-19 23:48:54 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 956)
+
+
+Started GET "/questions" for ::1 at 2021-02-19 23:50:11 -0600
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (23.85ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.4ms | Allocations: 1960)
+
+
+  
+NoMethodError (undefined method `answers' for #<QuestionSerializer:0x00007fe0720f8610>):
+  
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/questions_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2021-02-19 23:50:16 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 955)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-19 23:50:38 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 956)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-19 23:50:41 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 956)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-19 23:50:48 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.14ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 956)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-19 23:50:49 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.3ms | Allocations: 956)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-19 23:50:54 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.3ms | Allocations: 956)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-19 23:51:03 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 956)
+
+
+Started GET "/users" for ::1 at 2021-02-19 23:51:08 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.2ms | Allocations: 954)
+
+
+Started GET "/answers" for ::1 at 2021-02-19 23:51:13 -0600
+Processing by AnswersController#index as HTML
+  [1m[36mAnswer Load (1.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (137.43ms)
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 4.1ms | Allocations: 33170)
+
+
+  
+NoMethodError (undefined method `list_id' for #<Answer:0x00007fe072fd5e30>):
+  
+app/controllers/answers_controller.rb:8:in `index'
+Started GET "/answers" for ::1 at 2021-02-19 23:53:15 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by AnswersController#index as HTML
+  [1m[36mAnswer Load (1.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (109.23ms)
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 4.9ms | Allocations: 36521)
+
+
+  
+NoMethodError (undefined method `answers' for #<QuestionSerializer:0x00007fe0760d2e48>):
+  
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/answers_controller.rb:8:in `index'
+Started GET "/questions" for ::1 at 2021-02-19 23:53:51 -0600
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.29ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms | Allocations: 2037)
+
+
+  
+NoMethodError (undefined method `answers' for #<QuestionSerializer:0x00007fe076101608>):
+  
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/questions_controller.rb:8:in `index'
+Started GET "/questions" for ::1 at 2021-02-19 23:59:25 -0600
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (4.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.38ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 4.5ms | Allocations: 1959)
+
+
+  
+NoMethodError (undefined method `answers' for #<QuestionSerializer:0x00007fe072118b40>):
+  
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/questions_controller.rb:8:in `index'
+Started GET "/users" for 127.0.0.1 at 2021-02-19 23:59:31 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.24ms)
+Completed 200 OK in 42ms (Views: 26.1ms | ActiveRecord: 3.5ms | Allocations: 1415)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-20 17:05:18 -0600
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (11.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (80.47ms)
+Completed 200 OK in 318ms (Views: 260.1ms | ActiveRecord: 11.7ms | Allocations: 2564)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-20 21:01:17 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.17ms)
+Completed 200 OK in 29ms (Views: 18.1ms | ActiveRecord: 1.2ms | Allocations: 985)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-20 21:01:25 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 974)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-20 21:08:31 -0600
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.25ms)
+Completed 200 OK in 51ms (Views: 32.9ms | ActiveRecord: 0.7ms | Allocations: 984)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-20 21:08:42 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 974)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-02-20 21:08:47 -0600
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"Dani", "user"=>{"username"=>"Dani"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (7.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Dani"], ["created_at", "2021-02-21 03:08:47.697500"], ["updated_at", "2021-02-21 03:08:47.697500"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (3.17ms)
+Completed 201 Created in 150ms (Views: 63.7ms | ActiveRecord: 20.6ms | Allocations: 7357)
+
+
+Started DELETE "/users/13" for 127.0.0.1 at 2021-02-20 21:08:56 -0600
+Processing by UsersController#destroy as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:38:in `destroy'
+  [1m[36mUser Destroy (1.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/users_controller.rb:38:in `destroy'
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:38:in `destroy'
+Completed 204 No Content in 20ms (ActiveRecord: 4.2ms | Allocations: 2844)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-20 21:09:11 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 1.6ms | Allocations: 956)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-20 21:10:13 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.3ms | Allocations: 956)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-20 22:18:11 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.6ms | Allocations: 975)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-20 22:20:13 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.46ms)
+Completed 200 OK in 53ms (Views: 47.1ms | ActiveRecord: 2.4ms | Allocations: 956)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-20 22:20:54 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 1.3ms | Allocations: 956)
+
+
+Started GET "/" for ::1 at 2021-02-20 22:42:22 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/danielleellis/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/danielleellis/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 34.5ms | Allocations: 316)
+Completed 200 OK in 72ms (Views: 49.6ms | ActiveRecord: 0.0ms | Allocations: 1592)
+
+
+Started GET "/users" for ::1 at 2021-02-20 22:42:25 -0600
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.26ms)
+Completed 200 OK in 60ms (Views: 55.4ms | ActiveRecord: 3.5ms | Allocations: 1034)
+
+
+Started GET "/answers" for ::1 at 2021-02-20 22:42:30 -0600
+Processing by AnswersController#index as HTML
+  [1m[36mAnswer Load (0.9ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (1.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (216.57ms)
+Completed 500 Internal Server Error in 410ms (ActiveRecord: 8.3ms | Allocations: 39155)
+
+
+  
+NoMethodError (undefined method `answers' for #<QuestionSerializer:0x00007fe017982ac0>):
+  
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/answers_controller.rb:8:in `index'
+Started GET "/questions" for ::1 at 2021-02-20 22:42:33 -0600
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.96ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.2ms | Allocations: 2101)
+
+
+  
+NoMethodError (undefined method `answers' for #<QuestionSerializer:0x00007fe013c8ae10>):
+  
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/questions_controller.rb:8:in `index'
+Started GET "/questions" for ::1 at 2021-02-20 22:51:30 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.6ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 1.4ms | Allocations: 6687)
+
+
+  
+NoMethodError (undefined method `has_many' for #<QuestionSerializer:0x00007fe013c2b5a0>):
+  
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/questions_controller.rb:8:in `index'
+Started GET "/questions" for ::1 at 2021-02-20 22:51:58 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.96ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 2.2ms | Allocations: 6903)
+
+
+  
+NoMethodError (undefined method `answers' for #<QuestionSerializer:0x00007fe015162978>):
+  
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/questions_controller.rb:8:in `index'
+Started GET "/questions" for ::1 at 2021-02-20 23:00:24 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.72ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.7ms | Allocations: 6541)
+
+
+  
+NoMethodError (undefined method `answers' for #<QuestionSerializer:0x00007fe013d743a8>):
+  
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/questions_controller.rb:8:in `index'
+Started GET "/questions" for ::1 at 2021-02-20 23:03:58 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+Completed 204 No Content in 19ms (ActiveRecord: 0.0ms | Allocations: 896)
+
+
+Started GET "/questions" for ::1 at 2021-02-20 23:04:01 -0600
+Processing by QuestionsController#index as HTML
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 45)
+
+
+Started GET "/questions" for ::1 at 2021-02-20 23:04:20 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.31ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 1.5ms | Allocations: 6833)
+
+
+  
+NoMethodError (undefined method `answers' for #<QuestionSerializer:0x00007fe013a1d380>):
+  
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/questions_controller.rb:8:in `index'
+Started GET "/questions" for ::1 at 2021-02-20 23:05:06 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+[active_model_serializers] Rendered QuestionSerializer with ActiveModelSerializers::Adapter::Attributes (5.14ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 2190)
+
+
+  
+NoMethodError (undefined method `model_name' for QuestionSerializer:Class
+Did you mean?  module_parent):
+  
+app/controllers/questions_controller.rb:10:in `index'
+Started GET "/questions" for ::1 at 2021-02-20 23:06:35 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" LIMIT ?[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 349ms (ActiveRecord: 0.0ms | Allocations: 77909)
+
+
+  [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" LIMIT ?[0m  [["LIMIT", 11]]
+  
+NameError (undefined local variable or method `options' for #<QuestionsController:0x00007fe0150cbc30>
+Did you mean?  url_options):
+  
+app/controllers/questions_controller.rb:10:in `index'
+Started GET "/questions" for ::1 at 2021-02-20 23:11:41 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+[active_model_serializers] Rendered QuestionSerializer with ActiveModelSerializers::Adapter::Attributes (8.93ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 2177)
+
+
+  
+NoMethodError (undefined method `model_name' for QuestionSerializer:Class
+Did you mean?  module_parent):
+  
+app/controllers/questions_controller.rb:10:in `index'
+Started GET "/questions" for ::1 at 2021-02-20 23:12:15 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+[active_model_serializers] Rendered QuestionSerializer with ActiveModelSerializers::Adapter::Attributes (6.77ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 2159)
+
+
+  
+NoMethodError (undefined method `model_name' for QuestionSerializer:Class
+Did you mean?  module_parent):
+  
+app/controllers/questions_controller.rb:10:in `index'
+Started GET "/questions" for ::1 at 2021-02-20 23:29:23 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+[active_model_serializers] Rendered QuestionSerializer with ActiveModelSerializers::Adapter::Attributes (6.1ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 2161)
+
+
+  
+NoMethodError (undefined method `model_name' for QuestionSerializer:Class
+Did you mean?  module_parent):
+  
+app/controllers/questions_controller.rb:10:in `index'
+Started GET "/question" for ::1 at 2021-02-21 10:36:58 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/question"):
+  
+actionpack (6.0.3.5) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.5) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.5) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.5) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/quizzes" for ::1 at 2021-02-21 10:37:44 -0600
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (2.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:8:in `index'
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 7.3ms | Allocations: 4960)
+
+
+  
+SyntaxError (/Users/danielleellis/js-project/backend/app/serializers/quiz_serializer.rb:6: syntax error, unexpected end-of-input, expecting end):
+  
+app/serializers/quiz_serializer.rb:6: syntax error, unexpected end-of-input, expecting end
+app/serializers/quiz_serializer.rb:6: syntax error, unexpected end-of-input, expecting end
+app/controllers/quizzes_controller.rb:8:in `index'
+Started GET "/quizzes" for ::1 at 2021-02-21 10:38:48 -0600
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (0.4ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.24ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 13.6ms | Allocations: 6056)
+
+
+  
+NoMethodError (undefined method `questions' for #<QuizSerializer:0x00007fe0140fb7b0>):
+  
+app/serializers/quiz_serializer.rb:4:in `block in <class:QuizSerializer>'
+app/controllers/quizzes_controller.rb:8:in `index'
+Started GET "/questions" for ::1 at 2021-02-21 10:38:56 -0600
+Processing by QuestionsController#index as HTML
+[active_model_serializers] Rendered QuestionSerializer with ActiveModelSerializers::Adapter::Attributes (9.15ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms | Allocations: 1866)
+
+
+  
+NoMethodError (undefined method `model_name' for QuestionSerializer:Class
+Did you mean?  module_parent):
+  
+app/controllers/questions_controller.rb:10:in `index'
+Started GET "/questions" for ::1 at 2021-02-21 10:39:58 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+[active_model_serializers] Rendered QuestionSerializer with ActiveModelSerializers::Adapter::Attributes (5.16ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2148)
+
+
+  
+NoMethodError (undefined method `model_name' for QuestionSerializer:Class
+Did you mean?  module_parent):
+  
+app/controllers/questions_controller.rb:10:in `index'
+Started GET "/questions" for ::1 at 2021-02-21 10:42:03 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+[active_model_serializers] Rendered QuestionSerializer with ActiveModelSerializers::Adapter::Attributes (5.71ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 2182)
+
+
+  
+NoMethodError (undefined method `model_name' for QuestionSerializer:Class
+Did you mean?  module_parent):
+  
+app/controllers/questions_controller.rb:14:in `index'
+Started GET "/questions" for ::1 at 2021-02-21 10:43:18 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+[active_model_serializers] Rendered QuestionSerializer with ActiveModelSerializers::Adapter::Attributes (5.55ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 2177)
+
+
+  
+NoMethodError (undefined method `model_name' for QuestionSerializer:Class
+Did you mean?  module_parent):
+  
+app/controllers/questions_controller.rb:14:in `index'
+Started GET "/questions" for ::1 at 2021-02-21 10:45:41 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+Completed 500 Internal Server Error in 286ms (ActiveRecord: 0.0ms | Allocations: 71578)
+
+
+  
+NameError (undefined local variable or method `options' for #<QuestionsController:0x00007fe010f3b590>
+Did you mean?  url_options):
+  
+app/controllers/questions_controller.rb:10:in `index'
+Started GET "/questions" for ::1 at 2021-02-21 10:47:37 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+Completed 500 Internal Server Error in 206ms (ActiveRecord: 0.0ms | Allocations: 71579)
+
+
+  
+NameError (undefined local variable or method `options' for #<QuestionsController:0x00007fe013d66d20>
+Did you mean?  url_options):
+  
+app/controllers/questions_controller.rb:10:in `index'
+Started GET "/questions" for ::1 at 2021-02-21 10:47:58 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+[active_model_serializers] Rendered QuestionSerializer with ActiveModelSerializers::Adapter::Attributes (5.61ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 2177)
+
+
+  
+NoMethodError (undefined method `model_name' for QuestionSerializer:Class
+Did you mean?  module_parent):
+  
+app/controllers/questions_controller.rb:10:in `index'
+Started GET "/questions" for ::1 at 2021-02-21 10:53:13 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+[active_model_serializers] Rendered QuestionSerializer with ActiveModelSerializers::Adapter::Attributes (5.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 2178)
+
+
+  
+NoMethodError (undefined method `model_name' for QuestionSerializer:Class
+Did you mean?  module_parent):
+  
+app/controllers/questions_controller.rb:10:in `index'
+Started GET "/questions" for ::1 at 2021-02-21 10:55:33 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 1660)
+
+
+  
+NameError (uninitialized constant QuestionsController::QuestionsSerializer
+Did you mean?  QuestionSerializer):
+  
+app/controllers/questions_controller.rb:10:in `index'
+Started GET "/questions" for ::1 at 2021-02-21 10:55:49 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+[active_model_serializers] Rendered QuestionSerializer with ActiveModelSerializers::Adapter::Attributes (5.62ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 2178)
+
+
+  
+NoMethodError (undefined method `model_name' for QuestionSerializer:Class
+Did you mean?  module_parent):
+  
+app/controllers/questions_controller.rb:10:in `index'
+Started GET "/questions" for ::1 at 2021-02-21 11:02:27 -0600
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as HTML
+[active_model_serializers] Rendered QuestionSerializer with ActiveModelSerializers::Adapter::Attributes (4.78ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms | Allocations: 3518)
+
+
+  
+NoMethodError (undefined method `model_name' for QuestionSerializer:Class
+Did you mean?  module_parent):
+  
+app/controllers/questions_controller.rb:10:in `index'
+Started GET "/questions" for ::1 at 2021-02-21 11:03:30 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.92ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 1.8ms | Allocations: 6457)
+
+
+  
+SyntaxError (/Users/danielleellis/js-project/backend/app/serializers/answer_serializer.rb:5: syntax error, unexpected end, expecting end-of-input):
+  
+app/serializers/answer_serializer.rb:5: syntax error, unexpected end, expecting end-of-input
+app/serializers/answer_serializer.rb:5: syntax error, unexpected end, expecting end-of-input
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/questions_controller.rb:9:in `index'
+Started GET "/questions" for ::1 at 2021-02-21 11:03:49 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (19.67ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.2ms | Allocations: 7784)
+
+
+  
+NoMethodError (undefined method `answers' for #<QuestionSerializer:0x00007ff9698c32e0>):
+  
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/questions_controller.rb:9:in `index'
+Started GET "/questions" for ::1 at 2021-02-21 11:12:49 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (17.51ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.3ms | Allocations: 6589)
+
+
+  
+NoMethodError (undefined method `answer' for #<QuestionSerializer:0x00007ff963730f50>):
+  
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/questions_controller.rb:9:in `index'
+Started GET "/questions" for ::1 at 2021-02-21 11:13:01 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.11ms)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 1.9ms | Allocations: 6926)
+
+
+  
+NoMethodError (undefined method `answers' for #<QuestionSerializer:0x00007ff9637a15c0>):
+  
+app/serializers/question_serializer.rb:4:in `block in <class:QuestionSerializer>'
+app/controllers/questions_controller.rb:9:in `index'
+Started GET "/questions" for ::1 at 2021-02-21 11:15:19 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:9:in `index'
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 2.0ms | Allocations: 5535)
+
+
+  
+SyntaxError (/Users/danielleellis/js-project/backend/app/serializers/question_serializer.rb:7: syntax error, unexpected end, expecting end-of-input):
+  
+app/serializers/question_serializer.rb:7: syntax error, unexpected end, expecting end-of-input
+app/serializers/question_serializer.rb:7: syntax error, unexpected end, expecting end-of-input
+app/controllers/questions_controller.rb:9:in `index'
+Started GET "/questions" for ::1 at 2021-02-21 11:15:43 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (66.92ms)
+Completed 200 OK in 100ms (Views: 84.0ms | ActiveRecord: 4.0ms | Allocations: 23354)
+
+
+Started GET "/questions" for ::1 at 2021-02-21 11:20:51 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.7ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (51.52ms)
+Completed 200 OK in 73ms (Views: 64.9ms | ActiveRecord: 3.7ms | Allocations: 20839)
+
+
+Started GET "/quizzes" for ::1 at 2021-02-21 11:20:57 -0600
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (1.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.58ms)
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 3.7ms | Allocations: 5408)
+
+
+  
+NoMethodError (undefined method `questions' for #<QuizSerializer:0x00007ff966ffab10>):
+  
+app/serializers/quiz_serializer.rb:4:in `block in <class:QuizSerializer>'
+app/controllers/quizzes_controller.rb:8:in `index'
+Started GET "/quizzes" for ::1 at 2021-02-21 11:21:32 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (0.3ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:8:in `index'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.6ms | Allocations: 4828)
+
+
+  
+SyntaxError (/Users/danielleellis/js-project/backend/app/serializers/quiz_serializer.rb:4: syntax error, unexpected end, expecting end-of-input
+  end
+  ^~~):
+  
+app/serializers/quiz_serializer.rb:4: syntax error, unexpected end, expecting end-of-input
+app/serializers/quiz_serializer.rb:4: syntax error, unexpected end, expecting end-of-input
+app/controllers/quizzes_controller.rb:8:in `index'
+Started GET "/quizzes" for ::1 at 2021-02-21 11:21:40 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QuizzesController#index as HTML
+  [1m[36mQuiz Load (0.2ms)[0m  [1m[34mSELECT "quizzes".* FROM "quizzes"[0m
+  ↳ app/controllers/quizzes_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = ?[0m  [["quiz_id", 1]]
+[active_model_serializers]   ↳ app/controllers/quizzes_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (32.09ms)
+Completed 200 OK in 50ms (Views: 43.6ms | ActiveRecord: 2.8ms | Allocations: 11062)
+
+
+Started GET "/answers" for ::1 at 2021-02-21 11:21:59 -0600
+Processing by AnswersController#index as HTML
+  [1m[36mAnswer Load (4.8ms)[0m  [1m[34mSELECT "answers".* FROM "answers"[0m
+  ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Question Load (0.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Answer Load (0.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Answer Load (2.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Answer Load (0.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Answer Load (0.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Answer Load (0.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Answer Load (0.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Answer Load (0.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Answer Load (0.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Answer Load (0.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Answer Load (0.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Answer Load (0.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Answer Load (0.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Answer Load (0.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Answer Load (0.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mCACHE Answer Load (0.0ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   ↳ app/controllers/answers_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (453.41ms)
+Completed 200 OK in 510ms (Views: 490.6ms | ActiveRecord: 13.1ms | Allocations: 68269)
+
+
+Started GET "/questions" for ::1 at 2021-02-21 11:22:52 -0600
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (12.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.3ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers]   [1m[36mAnswer Load (0.4ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 5]]
+[active_model_serializers]   ↳ app/controllers/questions_controller.rb:9:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (256.91ms)
+Completed 200 OK in 276ms (Views: 261.9ms | ActiveRecord: 13.9ms | Allocations: 11226)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-21 12:20:41 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.76ms)
+Completed 200 OK in 141ms (Views: 119.5ms | ActiveRecord: 2.7ms | Allocations: 1592)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-21 12:20:49 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.07ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 956)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-21 12:32:20 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.96ms)
+Completed 200 OK in 25ms (Views: 18.9ms | ActiveRecord: 0.4ms | Allocations: 972)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-21 12:33:03 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 13ms (Views: 5.8ms | ActiveRecord: 0.4ms | Allocations: 956)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-21 12:33:11 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.4ms | Allocations: 956)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-21 12:33:36 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms | Allocations: 956)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-02-21 12:33:55 -0600
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.21ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 956)
+
+

@@ -3,10 +3,14 @@ class QuestionsController < ApplicationController
 
   # GET /questions
   def index
-    @questions = Question.all
+    #@questions = Question.all
 
-    render json: Question.all, include: [answers: {only: [:content]}], except: [:created_at, :updated_at]
+    # render({json: Question.all, include: [:answers]})
+     render json: Question.all, include: [answers: {only: [:text, :correct]}], except: [:created_at, :updated_at]
+    #render json: QuestionSerializer.new(Question.all)
+
   end
+
 
   # GET /questions/1
   def show

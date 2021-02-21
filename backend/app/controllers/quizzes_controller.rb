@@ -5,7 +5,7 @@ class QuizzesController < ApplicationController
   def index
     @quizzes = Quiz.all
 
-    render json: Quiz.all, include: [questions: {only: [:content]}], except: [:created_at, :updated_at]
+    render json: @quizzes
 
   end
 

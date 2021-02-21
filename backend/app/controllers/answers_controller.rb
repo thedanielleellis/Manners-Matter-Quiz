@@ -18,7 +18,7 @@ class AnswersController < ApplicationController
     @answer = Answer.new(answer_params)
 
     if @answer.save
-      render json: @answer, status: :created, location: @answer
+      render json: AnswerSerializer.new(answer)
     else
       render json: @answer.errors, status: :unprocessable_entity
     end
@@ -46,6 +46,7 @@ class AnswersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def answer_params
-      params.fetch(:answer, {})
+      params.require(:answer).permit(:content, :question_id)
     end
 end
+

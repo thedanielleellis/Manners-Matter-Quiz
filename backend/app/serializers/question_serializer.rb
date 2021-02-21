@@ -1,6 +1,4 @@
 class QuestionSerializer < ActiveModel::Serializer
-    attributes :content, :quiz_id
-    attribute :answers do |question|
-      AnswerSerializer.new(question.answers).as_json["data"]
+    attributes :content, :quiz_id, :answers
     has_many :answers
-  end
+end
